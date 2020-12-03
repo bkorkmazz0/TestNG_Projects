@@ -1,0 +1,15 @@
+<suite name="mySuite">
+    <tests name="myTests">
+        <test name="test1">
+            <classes>
+                <class name="TestNG.testler"/>
+                <class name="TestNG.basicTest"/>
+            </classes>
+        </test>
+        <test name="test2">
+            <classes>
+                <class name="TestNG.enabled_priority"/>
+            </classes>
+        </test>
+    </tests>
+</suite>

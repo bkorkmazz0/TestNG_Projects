@@ -1,0 +1,65 @@
+<suite name="My Suite" parallel = "tests" thread-count="7">
+    <tests name="My Tests">
+        <test name="Your Store Form Test">
+            <parameter name="firstname" value="Berkan"/>
+            <parameter name="lastname" value="Korkmaz"/>
+            <parameter name="email" value="bkorkmaz18@gmia.com"/>
+            <parameter name="telephone" value="05313874747"/>
+            <parameter name="password" value="xdxdxd"/>
+
+
+            <classes>
+                <class name="TestNG.parameters"/>
+            </classes>
+
+        </test>
+        <test name="Chrome Test">
+            <parameter name="browser" value="chrome"/>
+            <classes>
+                <class name="TestNG.myStoreTest"/>
+            </classes>
+        </test>
+        <test name="Firefox Test">
+            <parameter name="browser" value="firefox"/>
+            <classes>
+                <class name="TestNG.myStoreTest"/>
+            </classes>
+        </test>
+        <test name="test1">
+            <classes>
+                <class name="TestNG.testler"/>
+                <class name="TestNG.basicTest"/>
+            </classes>
+        </test>
+        <test name="test2">
+            <classes>
+                <class name="TestNG.enabled_priority"/>
+            </classes>
+        </test>
+        <test name="Include Test">
+            <classes>
+                <class name="TestNG.testler"/>
+                <methods>
+                    <!--<include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>-->
+                    <exclude name="test5"/>
+                    <exclude name="test6"/>
+                </methods>
+            </classes>
+        </test>
+
+        <test name="Group Test">
+            <groups>
+                <run>
+                    <exclude name="grup1"/>
+                </run>
+
+            </groups>
+            <classes>
+                <class name="TestNG.testler"/>
+            </classes>
+        </test>
+    </tests>
+
+</suite>
